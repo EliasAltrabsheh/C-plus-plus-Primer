@@ -1,0 +1,18 @@
+1) Why does c++ Have more than on integer type?
+
+We have the singed and unsinged . each with if we require only positive values to be stored.
+
+we can also have types that suit us for best need for that particular calculation.
+
+2) Declare variables matching following ?
+
+A) short integer = short value = 80; // or short int which is 16 bytes = 32700
+B) unsigned int value = 42100;     // value for unsigned is 16 bytes with = 65500
+C) long value = 3000000000;  // max value for long is 32 bytes with 2.14*10^9 for unsigned it needs to be 32 = 4.29 * 10 ^9
+
+
+3) What safe guard does c++ provide for using higher values  ?
+
+it provides no safe automatically unless exceeding storage of type. However, We can Provide climate header file.
+
+````````````````  

@@ -1,0 +1,85 @@
+1) how would you declare each of the following :
+a) char actors[30] ;
+b) short betsie [100];
+
+2) Declare an array of 5 ints and initialize it to the first five odd positive integer's?
+
+int numbers[5];
+
+numbers[5]= {1,2,3,4,5};
+
+3) write a statement that assigns the sum of the first and last element of an even array ?
+
+int even[5];
+even[5] = { 2,4,6,8,10};
+int sum = even[5]+even[4];
+
+ 4) write a statment that displays the second value of array called ideas?
+ cout << ideas[1] << endl;
+
+ 5) Declare an array and initlize it to the string ?
+
+ char array[] = "cheeseburger";
+
+ 6) write a strcture with fish
+
+ struct fish
+ {
+ char kind[20];
+  int weight;
+  float length ;
+ };
+
+ 7) do the same for type?
+
+ fish elias
+ {
+  "seabass",
+   16,
+   5.7
+ };
+
+ 8) use enum for folwwing :
+
+enum response [] = {no , yes, maybe};
+
+9) suppose ted is double varible , declare pointer to that ?
+
+double ted;
+double * pr;
+
+pr = &ted;
+
+cout << *pr <<endl;
+
+10) suppose treacle is an array of 10 floats. Declare a pointer that points to first element and last element?
+
+float treacle[10];
+
+float * pr = treacle;
+
+cout << pr[0] << pr[9] << endl;
+
+or
+
+ cout << *pr << *(pr+9) << endl;
+
+11) write a code fragment that asks the user to enter a postive integer and then creats a dynamic array with many ints ?
+unsigned int size;
+cout << "Enter positive value :";
+cin >> size;
+int * dyn = new int [size];
+
+13) write fragment of code that allocates dynamic memory of values ?
+
+struct fish
+{
+  char kind[20];
+  int weight;
+  float double ;
+};
+
+int * dyn = new fish;
+
+cout << "Enter kind of fish ";
+cin >> seabass-> kind;
