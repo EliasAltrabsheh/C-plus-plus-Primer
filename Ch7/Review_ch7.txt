@@ -1,0 +1,65 @@
+1) three steps to using function is : declaring function, defining prototype and calling function.
+
+2)construct function prototype of following.
+
+a- void igor();
+b- float tofu(int n);
+c- double mpg(double A , double B);
+d- long summation(long arr[], int size);
+e- double doctor(const char * str);
+f - void ofcourse(boss dude);
+g - char * plot( map * pmam);
+
+
+4) fuction that takes a pointer to first ellement in array , pointer to end element , pointer to value :
+
+int func(int * begin , int * end , int value )
+
+{
+for ( int * pt = begin ; *pt!=end; pt++)
+{
+  pt* = value
+}
+}
+
+5) write a function that takes a double array name and size and returns largest value in that array?
+
+double func( const double * arr, int size)
+{
+  double max;
+
+  if (size < 1)
+   {
+    cout << " Insert bigger size ";
+   }
+else
+  {
+   max = arr[0]
+    for(int i = 0; i< size; i++)
+    {
+      if(max>arr[i])
+        max = arr[i]
+    }
+  return max;
+  }
+}
+
+8) function that replaces c1 with c2 with following prototype.
+
+int replace(char * str,char c1, char c2)
+{
+  char temp;
+  int count = 0;
+
+   while(*str )// while not at end of string
+   {
+     if (*str == c1)
+      {
+         *str =c2
+         count ++;
+      }
+     str++; // go to next charcter of string
+   }
+  return count;
+
+}

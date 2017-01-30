@@ -1,0 +1,50 @@
+1) What is the difference between entry condition  loop and exit condition  loop ?
+
+Entry evaluates test condition  before entering the body of loop.
+exit condition   evaluates test condition after  entering the body of loop.
+
+2) what is output of following :
+int i ;
+for (i =0, i <5; i++)
+   cout << i<< endl ;
+   ???
+01234
+
+3) what is output of following :
+int i ;
+for (i =0, i <11; i+=3)
+  {
+  cout << i<< endl ;
+  }
+  cout << i;
+   ???
+0369
+12
+
+4) what is output of following :
+int i = 5 ;
+while(++i< 9)
+  {
+  cout << i++<< endl ;
+  }
+   ???
+6 8
+5)what is output of following :
+int i= 8 ;
+do{
+  cout << "i" = << i <<  endl ;
+  }while(k++ < 5)
+   ???
+   i= 8
+as i++ will always condition  will be 9<5 which is false  so loop break after entering body once
+
+6)Write for loop that prints vale increasing factor of two each cycle ?
+
+int value  = 1;
+
+ for (value =0 ; value <= 64 ; value*=2)
+    cout << value << endl;
+
+8) is the following statement valid(explain) ?
+int x = (1,024) // This statm,ent will make x = 024 which is octal for 20 .
+int y = 1, 0024 // This statment will ignor second part 
