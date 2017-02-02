@@ -13,12 +13,12 @@ struct CandyBar
 
 int main()
 {
-  CandyBar * snack = new CandyBar[3];  //definingf new dynamic array of strct type
+  CandyBar * snack = new CandyBar[3];  //defining new dynamic array of strct type
   cout << "What the name of the candy ? \n";
   cin >> snack[0].brand ;
   cout << "What the weight of the candy ? \n";
   cin >> snack[0].weight ;
-  cout << "How many calaries has the candy have ? \n"; 
+  cout << "How many calaries has the candy have ? \n";
   cin >> snack[0].calories;
   cout << "The candy bar is called : " << snack[0].brand  << endl;
   cout << "The weight is :  " << snack[0].weight  << endl;

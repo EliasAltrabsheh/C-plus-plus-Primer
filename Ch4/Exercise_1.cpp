@@ -12,9 +12,14 @@ int main()
   char grade;
 
   cout << "What is your first name ?\n";
-  cin.get(name,size).get();
+  cin.get(name,size).get(); // the secong get so it doesnt skip new line when enter is pressed by the user
   cout << "Enter your grade?\n";
   cin >> grade;
+  if (grade == 'E')
+  {
+    grade +=1;
+  }
+
   cout << "Enter your age ?\n";
   cin >> age;
   cout << "\nYour name is  " << name << ", you age is  " << age << " and you grade is " << grade << endl;

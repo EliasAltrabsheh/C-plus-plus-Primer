@@ -18,10 +18,10 @@ int main()
 
     for (j = 0, i = word.size()-1; j < i; --i, ++j) // for loop looks at string property with word size is size of string minus /0(_empty space) element
     {
-      temp = word[i];  cout << temp << endl;
-      word[i] = word[j];cout << word[i] << endl;
-      word[j] =temp; cout << word[j] << endl;
-        cout << word<<endl;
+      temp = word[i]; 
+      word[i] = word[j];
+      word[j] =temp;
+
     }
     cout << word;
   return 0;
