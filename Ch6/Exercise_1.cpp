@@ -16,12 +16,13 @@ int main()
   while(ch != '@')
   {
     if(isalpha(ch)) // is it an alphabtic character
-      cout << "\b";
+      {
+        cout << "\a";
         if (islower(ch))
-
-          cout << isupper(ch);
+          cout << toupper(ch) << endl;
         else if (isupper(ch))
-          cout << islower(ch);
+          cout << tolower(ch) << endl;
+      }
     cin.get(ch);
   }
 
