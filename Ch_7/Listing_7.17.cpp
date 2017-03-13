@@ -1,38 +1,36 @@
-/* pointer function example */
-
-#include<iostream>
-double betsy(int); // declaration prototype that the type of pointer to int tyype pinting to double
-double pam(int);
-using namespace std;
-
-void estimate(int lines, double(*pf)(int)); // pointer pf points to double type that takes int
+// ruler.cpp -- using recursion to subdivide a ruler
+ #include <iostream>
+ const int Len = 66;
+ const int Divs = 6;
+ void subdivide(char ar[], int low, int high, int level);
 
 int main()
 {
-  int code;
-
-  cout << "how many lines of code do you need? " <<endl;
-  cin >>code;
-  cout << " here is betsy estimate" <<endl;
-  estimate(code,betsy);
-  cout << " here is pam estimate" <<endl;
-  estimate(code,pam);
+  char ruler[Len];
+  int i;
+  for (i = 1; i < Len - 2; i++)
+  ruler[i] = ' ';
+  ruler[Len - 1] = '\0';
+  int max = Len - 2;
+  int min = 0;
+  ruler[min] = ruler[max] = '|';
+  std::cout << ruler << std::endl;
+  for (i = 1; i <= Divs; i++)
+  {
+    subdivide(ruler,min,max, i);
+    std::cout << ruler << std::endl;
+    for (int j = 1; j < Len - 2; j++)
+      ruler[j] = ' ';  // reset to blank ruler
+  }
   return 0;
+
 }
 
-double betsy(int lns)
+void subdivide(char ar[], int low, int high, int level)
 {
-  return 0.05 * lns;
-}
-
-double pam(int lns)
-{
-  return 0.03 * lns;
-}
-
-void estimate(int lines, double(*pf)(int))
-{
-  cout << lines << "lines will take" ;
-  cout << (*pf)(lines) << "hour(s)" <<endl;
-  
+  if (level == 0) return;
+  int mid = (high + low) / 2;
+  ar[mid] = '|';
+  subdivide(ar, low, mid, level - 1);
+  subdivide(ar, mid, high, level - 1);
 }

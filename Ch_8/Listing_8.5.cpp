@@ -1,4 +1,12 @@
-/* sample to look at refrence propetries once passed in a function */
+/* sample to look at refrence propetries once passed in a function
+Use const When You Can There are three strong reasons to declare reference arguments as references to constant data:
+
+1) Using const protects you against programming errors that inadvertently alter data.
+2) Using const allows a function to process both const and non-const actual arguments, whereas a function that omits const in the prototype only can accept nonconst data.
+3) Using a const reference allows the function to generate and use a temporary variable appropriately.
+
+
+*/
 
 #include<iostream>
 

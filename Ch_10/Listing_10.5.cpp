@@ -1,93 +1,89 @@
-
-// Constructer Stock Example
+//stock10.cpp -- Stock class with constructors, destructor added
 #include <iostream>
-#include "stock.h" // also known as string.h which is a header that has various function for manipulating strings
-#include <cstring>
-//constructers
-Stock::Stock() //Declaration of our class defult constructer
-{
-  std::cout << "Defult Copnstructer called" << '\n';
-  std::strcpy(company, "no name");
-  shares = 0;
-  share_val = 0.0;
-  total_val = 0.0;
-}
+#include "stock10.h"
+// constructors (verbose versions)
 
-Stock::Stock(const char * co, int n , double pr) //Declaration of our class defult constructer
-{
-  std::cout << "Constructers using" << co << "called\n" ;
-  std::strncpy(company, co ,29);
-  company[29] = '\0';
-
-  if (n < 0)
-  {
-    std::cerr<<"number of shares can't be negative;" << co << " Share set to 0.\n  " ;
+ Stock::Stock()        // default constructor
+ {
+    std::cout << "Default constructor called\n";
+    company = "no name";
     shares = 0;
+    share_val = 0.0;
+    total_val = 0.0;
   }
+Stock::Stock(const std::string & co, long n, double pr)
+{
+  std::cout << "Constructor using " << co << " called\n";
+  company = co;
 
-  else
-  {
-    shares = n;
-    share_val = pr;
-    set_tot();
-  }
+if (n < 0)
+{
+  std::cout << "Number of shares can’t be negative; " << company << " shares set to 0.\n";
+  shares = 0;
 }
-
-// class destructer
-Stock::~Stock()
+else
+shares = n;
+share_val = pr;
+set_tot();
+}
+// class destructor
+Stock::~Stock()        // verbose class destructor
 {
   std::cout << "Bye, " << company << "!\n";
 }
+// other methods
 
-// other methods of using this
-void Stock::buy(int num, double price)
+void Stock::buy(long num, double price)
 {
   if (num < 0)
   {
-    std::cerr << "number of shares can't be negative;" << "Transaction is aborted.\n";
-  }
-  else
-  {
-    shares += num;
-    share_val = price;
-    set_tot();
-  }
-}
+     std::cout << "Number of shares purchased can’t be negative. "<< "Transaction is aborted.\n";
+
+   }
+   else
+   {
+     shares += num; share_val = price; set_tot();
+   }
+ }//end of void buy
+
+  void Stock::sell(long num, double price)
+   {
+     using std::cout;
+     if (num < 0)
+     {
+       cout << "Number of shares sold can’t be negative. " << "Transaction is aborted.\n";
+     }
+     else if
+     (num > shares)
+     {
+       cout << "You can’t sell more than you have! " << "Transaction is aborted.\n";
+     }
+      else
+     {
+       shares -= num;
+       share_val = price;
+       set_tot();
+     }
+   }
+
+   void Stock::update(double price)
+   {
+     share_val = price;
+     set_tot();
+   }
 
 
-void Stock::sell(int num, double price)
-{
-  if (num < 0)
-  {
-    std::cerr<<"number of shares can't be negative;" <<"Transaction is aborted.\n";
-  }
-
-  else if (num > shares)
-
-  {
-    std::cerr<<"you cant sell more than you have!duh!;" <<"Transaction is aborted.\n";
-  }
-
-  else
-  {
-    shares -= num;
-    share_val = price;
-    set_tot();
-  }
-}
-
-void Stock::update(double price)
-{
-  share_val = price;
-  set_tot();
-}
-
-void Stock::show()
-{
-  using std::cout;
-  using std::endl;
-  cout <<"Company: " << company
-  << " Shares: " << shares  <<  endl
-  << " Shares Price: £" << share_val
-  << " Total Worth: £"  <<  total_val <<endl;
+   void Stock::show()
+   {
+     using std::cout;
+     using std::ios_base; // set format to #.###
+     ios_base::fmtflags orig = cout.setf(ios_base::fixed, ios_base::floatfield);
+     std::streamsize prec = cout.precision(3);
+     cout << "Company: " << company << "  Shares: " << shares << '\n';
+     cout << "  Share Price: $" << share_val; // set format to #.##
+     cout.precision(2);
+     cout << "  Total Worth: $" << total_val << '\n';
+// restore original format
+     cout.setf(orig, ios_base::floatfield);
+     cout.precision(prec);
 }

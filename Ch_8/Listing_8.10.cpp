@@ -1,13 +1,14 @@
 /* example that looks at oveloading function */
 #include<iostream>
-using namespace std;
+
 
 unsigned long left(unsigned long num, unsigned ct);
 char * left(const * str, int n = 1);
 
 int main()
 {
-  char *trip = "hawaii!!"; // test value
+  using namespace std;
+  char * trip = "hawaii!!"; // test value
   unsigned long n = 123456789; //test value
 
   int i;
@@ -16,7 +17,7 @@ int main()
   for(i = 1 ; i < 10; i++)
   {
     cout << left(n , i) << endl;
-    temp = left ( trip, i);
+    temp = left (trip, i);
     cout << temp << endl;
     delete [] templ // point to temporary storage
   }

@@ -1,4 +1,11 @@
-/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/../../../../lib/libcygwin.a(libcmain.o): In function `main':
-/usr/src/debug/cygwin-2.6.1-1/winsup/cygwin/lib/libcmain.c:37: undefined reference to `WinMain'
-/usr/src/debug/cygwin-2.6.1-1/winsup/cygwin/lib/libcmain.c:37:(.text.startup+0x7f): relocation truncated to fit: R_X86_64_PC32 against undefined symbol `WinMain'
-collect2: error: ld returned 1 exit status
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x6d): undefined reference to `Stock::Stock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long, double)'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0xd1): undefined reference to `Stock::Stock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long, double)'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x132): undefined reference to `Stock::Stock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long, double)'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x193): undefined reference to `Stock::Stock(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long, double)'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x1e6): undefined reference to `Stock::show() const'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x224): undefined reference to `Stock::topval(Stock const&) const'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x24e): undefined reference to `Stock::show() const'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x273): undefined reference to `Stock::~Stock()'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x314): undefined reference to `Stock::~Stock()'
+C:\Users\Home\AppData\Local\Temp\ccu50sXX.o:Listing_10.9.cpp:(.text+0x342): undefined reference to `Stock::~Stock()'
+collect2.exe: error: ld returned 1 exit status
