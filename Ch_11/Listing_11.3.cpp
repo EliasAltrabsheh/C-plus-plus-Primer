@@ -5,7 +5,7 @@ int main()
 {
   using std::cout;
   using std::endl;
-
+  // defineing new objects of class
   Time planning;
   Time coding(2,40);
   Time fixing(5,55);

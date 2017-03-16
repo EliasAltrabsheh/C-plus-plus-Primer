@@ -1,2 +1,6 @@
-C:/Program Files (x86)/mingw-w64/i686-6.2.0-posix-dwarf-rt_v5-rev1/mingw32/bin/../lib/gcc/i686-w64-mingw32/6.2.0/../../../../i686-w64-mingw32/lib/../lib/libmingw32.a(lib32_libmingw32_a-crt0_c.o):crt0_c.c:(.text.startup+0x39): undefined reference to `WinMain@16'
+C:\Users\Home\AppData\Local\Temp\ccvEAEfc.o:Listing_11.21.cpp:(.text+0x2e): undefined reference to `Stonewt::Stonewt(int, double)'
+C:\Users\Home\AppData\Local\Temp\ccvEAEfc.o:Listing_11.21.cpp:(.text+0x3b): undefined reference to `Stonewt::operator double() const'
+C:\Users\Home\AppData\Local\Temp\ccvEAEfc.o:Listing_11.21.cpp:(.text+0xa4): undefined reference to `Stonewt::operator int() const'
+C:\Users\Home\AppData\Local\Temp\ccvEAEfc.o:Listing_11.21.cpp:(.text+0xe6): undefined reference to `Stonewt::~Stonewt()'
+C:\Users\Home\AppData\Local\Temp\ccvEAEfc.o:Listing_11.21.cpp:(.text+0xf6): undefined reference to `Stonewt::~Stonewt()'
 collect2.exe: error: ld returned 1 exit status

@@ -31,7 +31,7 @@ StringBad::~StringBad()               // necessary destructor
 cout << num_strings << " left\n"; // FYI
  delete [] str;                    // required
  }
- 
+
 std::ostream & operator<<(std::ostream & os, const StringBad & st)
 {
   os << st.str;
