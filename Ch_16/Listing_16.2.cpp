@@ -12,6 +12,7 @@ int main()
     if (fin.is_open() == false)
     {
       cerr << "cant open file .\n"; // error output
+      exit(EXIT_FAILURE);
     }
   string item;
   int count = 0;

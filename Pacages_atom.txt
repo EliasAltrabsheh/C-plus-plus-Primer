@@ -1,0 +1,14 @@
+Atom packages:
+1- atom beatuify
+2- autocomplete-clang
+3- busy-signal
+4-cpp- generator
+5- gpp compiler
+6- intentions
+7-language cuda
+8-linter-gcc
+9-minimap
+10- open_in_broser
+11-open_recent
+
+ritm6023680
