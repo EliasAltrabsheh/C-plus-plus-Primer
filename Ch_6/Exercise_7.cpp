@@ -12,12 +12,12 @@ cout << "Enter Words (q to quit) :\n";
 
 string word ;
 
-int vowel,constents
+int vowel,constents;
 
 while(letter !='q')
 {
 
-
+if
 }
 return 0;
 }

@@ -13,7 +13,7 @@ int main()
   clock_t delay = secs * CLOCKS_PER_SEC; // CLOCKS_PER_SEC is a macro thqat is part of time.h library which is seconds
   clock_t start = clock();  // start is clock function which is dep[ending on procsser]
   while(clock() - start < delay )
-    ; // do nothing line 
+    ; // do nothing line
   cout << "done \a\n"; // \a is alarm sound.
   return 0;
 }

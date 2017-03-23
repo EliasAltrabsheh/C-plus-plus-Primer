@@ -26,7 +26,7 @@ int main()
   }; // mate is strcture of type inflatable
   cout << "Expand your guest list with " << guest.name;
   cout << " and " << mate.name << endl;
-  cout << "you can have both for : £";
+  cout << "you can have both for : $";
   cout << guest.price + mate.price << endl;
   return 0;
 }
